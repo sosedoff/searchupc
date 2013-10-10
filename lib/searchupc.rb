@@ -1,5 +1,6 @@
 require "searchupc/version"
+require "searchupc/client"
 
 module Searchupc
-  # Your code goes here...
+  class Error < StandardError ; end
 end
