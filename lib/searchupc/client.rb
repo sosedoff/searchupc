@@ -10,7 +10,14 @@ module Searchupc
     end
 
     def search(upc)
-      JSON.parse(request(request_type: 3, upc: upc))
+      response = JSON.parse(request(request_type: 3, upc: upc))
+      results  = []
+
+      if response.any?
+        response.each_pair { |_,v| results << v }
+      end
+
+      results
     end
 
     def valid_code?(upc)
