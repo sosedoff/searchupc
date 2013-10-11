@@ -14,7 +14,7 @@ module Searchupc
     end
 
     def valid_code?(upc)
-      request(request_type: 1, upc: upc) == "True"
+      request(request_type: 2, upc: upc) == "True"
     end
 
     private
