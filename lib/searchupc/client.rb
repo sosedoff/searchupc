@@ -13,7 +13,7 @@ module Searchupc
       JSON.parse(request(request_type: 3, upc: upc))
     end
 
-    def valid?(upc)
+    def valid_code?(upc)
       request(request_type: 1, upc: upc) == "True"
     end
 
